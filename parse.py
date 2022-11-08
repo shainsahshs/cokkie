@@ -76,11 +76,11 @@ class Parser:
             if "this" in line and not self.IsInString("this", line):
                 code = code.replace(line, line.replace("this", "self"))
         for line in code.splitlines():
-            if "true" in line and not self.IsInString("true", line):
-                code = code.replace(line, line.replace("true", "True"))
+            if "True" in line and not self.IsInString("True", line):
+                code = code.replace(line, line.replace("True", "True"))
         for line in code.splitlines():
-            if "false" in line and not self.IsInString("false", line):
-                code = code.replace(line, line.replace("false", "False"))
+            if "False" in line and not self.IsInString("False", line):
+                code = code.replace(line, line.replace("False", "False"))
         for line in code.splitlines():
             if "null" in line and not self.IsInString("null", line):
                 code = code.replace(line, line.replace("null", "None"))
